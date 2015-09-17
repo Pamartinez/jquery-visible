@@ -15,7 +15,10 @@
 
         if (this.length < 1)
             return;
-
+       
+        if (this.is(":hidden"))
+            return false;
+            
         var $t        = this.length > 1 ? this.eq(0) : this,
             t         = $t.get(0),
             vpWidth   = $w.width(),
